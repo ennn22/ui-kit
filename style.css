@@ -1,0 +1,243 @@
+:root {
+  --bg-color-1: #2E3F50;
+  --bg-color-2: #F6F6F8;
+  --bg-color-3: #FFFEFE;
+  --bg-color-4: #19BB9D;
+
+  --font-color-1: #334155;
+  --font-color-2: #64748b;
+  --font-color-3: #FFFEFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color-1);
+  color: var(--font-color-1);
+}
+
+.container {
+  width: 70vw;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: var(--bg-color-1);
+}
+
+.navbar {
+  background-color: var(--bg-color-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 20px 0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.navbar-left {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-left li {
+  padding-left: 40px;
+}
+
+.navbar-right {
+  background-color: var(--bg-color-3);
+  display: flex;
+}
+
+.navbar-right input {
+  border-style: none;
+  padding-left: 10px;
+}
+
+.navbar-right input:focus {
+  outline: none;
+}
+
+.navbar-right svg {
+  height: 20px;
+}
+
+.first-row-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 30px 1fr;
+  width: 100%;
+}
+
+.scenery-photo {
+  background-image: url("https://tourscanner.com/blog/wp-content/uploads/2022/09/Osaka-Castle-Japan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+  color: #E7E9E7;
+}
+
+.sign-in-box {
+  background-color: var(--bg-color-2);
+  border-radius: 0 10px 10px 0;
+  padding: 0 30px;
+}
+
+.sign-in-box h4 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.email, 
+.psw {
+  background-color: var(--bg-color-3);
+  border-radius: 5px;
+  display: flex;
+  padding: 15px 5px;
+  gap: 5px;
+}
+
+.email {
+  margin-bottom: 5px;
+}
+
+.email input:focus, 
+.psw input:focus {
+  outline: none;
+  border-style: none;
+}
+
+.email svg,
+.psw svg {
+  width: 18px;
+  color:#19BB9D;
+}
+
+#email, 
+#psw {
+  border-style: none;
+}
+
+.rmb-me {
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.sign-in-box button {  
+  background-color: var(--bg-color-4);
+  color: var(--font-color-3);
+  border-style: none;
+  padding: 20px 0;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.create-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-decoration: underline;
+  padding: 5px 0;
+}
+
+.login-options {
+  font-size: 12px;
+  color: var(--font-color-2);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.login-method {
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--font-color-3);
+  padding: 10px 0;
+  font-weight: 300;
+}
+
+.fb {
+  background-color: #3A5998;
+  margin-bottom: 10px;
+}
+
+.gmail {
+  background-color: #CD3328;
+}
+
+.calendar {
+  grid-column: 4 / 5;
+  background-image: url("https://t3.ftcdn.net/jpg/03/33/67/80/360_F_333678091_tOcalp3NEz7oNgOSS8gXYtfH5Q4DPOV9.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: var(--bg-color-3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-display {
+  color: var(--font-color-3);
+  text-align: center;
+  padding: 34px 0;
+}
+
+.date {
+  font-size: 72px;
+}
+
+.calendar-header {
+  color: var(--font-color-3);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.calendar-body {
+  padding: 0 10px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: 12px;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0;
+  row-gap: 20px;
+}
+
+.active {
+  border: 5px solid var(--bg-color-4);
+  padding: 5px;
+}
