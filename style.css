@@ -186,10 +186,6 @@ body {
 
 .calendar {
   grid-column: 4 / 5;
-  background-image: url("https://t3.ftcdn.net/jpg/03/33/67/80/360_F_333678091_tOcalp3NEz7oNgOSS8gXYtfH5Q4DPOV9.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
   background-color: var(--bg-color-3);
   border-radius: 10px;
   display: flex;
@@ -200,6 +196,9 @@ body {
   color: var(--font-color-3);
   text-align: center;
   padding: 34px 0;
+  background-image: url("https://t3.ftcdn.net/jpg/03/33/67/80/360_F_333678091_tOcalp3NEz7oNgOSS8gXYtfH5Q4DPOV9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .date {
@@ -240,4 +239,104 @@ body {
 .active {
   border: 5px solid var(--bg-color-4);
   padding: 5px;
+}
+
+.second-row-content {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr 1fr;
+  width: 100%;
+  grid-template-columns: ;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.profile-wrapper {
+  border: 1px solid blue;
+  background-color: var(--bg-color-3);
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.user-photo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.user-details p:last-child {
+  font-size: 14px;
+  color: var(--font-color-2);
+}
+
+.profile-follower {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.no-follower p:first-child,
+.no-following p:first-child,
+.no-photo p:first-child {
+  font-weight: 700;
+}
+
+.no-follower p:last-child,
+.no-following p:last-child,
+.no-photo p:last-child {
+  font-size: 12px;
+}
+
+.follow-btn-wrapper {
+  background-color: var(--bg-color-2);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.follow-btn {
+  background-color: var(--bg-color-4);
+  color: var(--font-color-3);
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+
+.gallery {
+  background-color: var(--bg-color-3);
+  grid-column: 3 / 5;
+  border-radius: 10px;
+}
+
+.gallery-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.gallery-header p {
+  font-size: 14px;
+  color: var(--font-color-2);
+}
+
+.gallery-photo {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-photo img {
+  width: 33.3%;
+  transition: all .5s;
+  box-shadow: 0 0 5px 0 var(--font-color-2);
+}
+
+.gallery-photo img:hover {
+  scale: 1.1;
 }
